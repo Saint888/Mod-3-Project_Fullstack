@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+p {
+  font-size: 15px;
+}
+
+.left {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+.right {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+.middle {
+  font-size: 12px;
+  width: 75px;
+  height: 65px;
+  border-radius: 80%;
+  border: solid 1px black;
+  margin: 3px;
+}
+
+
+
+/* button{
+  width: 100px;
+  height: 50px;
+  border-radius: 20%;
+} */
