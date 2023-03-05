@@ -17,29 +17,42 @@ p {
 }
 
 .left {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: solid 1px black;
 }
 
 .right {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: solid 1px black;
 }
 
 .middle {
   font-size: 12px;
-  width: 75px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   border-radius: 80%;
   border: solid 1px black;
   margin: 3px;
 }
 
+.play{
+  height: 30px;
+  width: 30px;
+}
 
+.back{
+  height: 15px;
+  width: 15px;
+}
+
+.next{
+  height: 15px;
+  width: 15px;
+}
 
 /* button{
   width: 100px;
