@@ -40,19 +40,19 @@ function App() {
       title: "Private Valet",
       artist: "Larry June",
       img_src: "./images/song-2.jpg",
-      src: "./music/somebody-new.mp3"
+      src: "./music/Larry-June-PrivateValet.mp3"
     },
     {
       title: "4 U ft Kali Uchis",
       artist: "Don Toliver",
       img_src: "./images/song-3.jpg",
-      src: "./music/on-n-on.mp3"
+      src: "./music/Don Toliver-DonToliver-4-Me[Official Audio].mp3"
     },
     {
-      title: "Time",
+      title: "Time ft HER",
       artist: "Kaytranada",
       img_src: "./images/song-4.jpg",
-      src: "./music/somebody-new.mp3"
+      src: "./music/KAYTRANADA-Intimidated.mp3"
     }
   ]);
 
@@ -60,15 +60,15 @@ function App() {
   const [nextSongIndex, setNextSongIndex] = useState(0);
 
   useEffect(() => {
-    setNextSongIndex(() => {
-      if (currentSongIndex + 1 > appData.length - 1) {
+    setNextSongIndex(() => { // Anytime current song chsnges we need 'next que' to update as well.
+      if (currentSongIndex + 1 > appData.length - 1) { // If current song skips next song and amount of songs left is more than whats left in array, then we got back to 0 (beginning of array).
         return 0;
       } else {
-        return currentSongIndex + 1;
+        return currentSongIndex + 1; // Otherwise -> return 'next' song.
       }
     });
     
-  }, [currentSongIndex]);
+  }, [currentSongIndex]); // As current song update changes, the function will envoke.
 
   return (
     <div className="App">

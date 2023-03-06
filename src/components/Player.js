@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import Controls from './Controls';
-import Details from './Details';
+import CurrentMusic from './CurrentMusic';
 
 function Player(props) {
     const audioEl = useRef(null);
@@ -14,28 +14,28 @@ function Player(props) {
         }
     });
 
-    const SkipSong = (forwards = true) => {
-        if (forwards) {
+    const SkipSong = (skip = true) => {
+        if (skip) { //Checks if listner wants to skip 
             props.setCurrentSongIndex(() => {
-                let temp = props.currentSongIndex;
-                temp++;
+                let item = props.currentSongIndex;
+                item++;
 
-                if (temp > props.songs.length - 1) {
-                    temp = 0;
+                if (item > props.songs.length - 1) { // If skip, move once through array from current song.
+                    item = 0;
                 }
 
-                return temp;
+                return item; // Return 'next' song.
             });
         } else {
             props.setCurrentSongIndex(() => {
-                let temp = props.currentSongIndex;
-                temp--;
+                let item = props.currentSongIndex; // Else, return to previous 'current' song.
+                item--;
 
-                if (temp < 0) {
-                    temp = props.songs.length - 1;
+                if (item < 0) {
+                    item = props.songs.length - 1; 
                 }
 
-                return temp;
+                return item; // Return 'previous' song.
             });
         }
     }
@@ -44,8 +44,8 @@ function Player(props) {
     return (
         <div className="music">
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
-            <h4>Playing now</h4>
-            <Details song={props.songs[props.currentSongIndex]} />
+            <h4>Now Playing: </h4>
+            <CurrentMusic song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             <p>Next up: <span>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p>
         </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
+
 
 function Nav(props){
 
@@ -31,7 +31,6 @@ function Nav(props){
         </svg>
       </button>
       <div className={isNavExpanded ? "nav-bar expanded" : "nav-bar"}>
-            {/* <img src='' alt='' /> */}
             <li> <Link className="link" to='/'>Home</Link></li>
             <li> <Link className="link" to='/MusicList'>My Music</Link></li>
             <li> <Link className="link" to='/SubForm'>Subscribe</Link></li>

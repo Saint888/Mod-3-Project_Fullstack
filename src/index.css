@@ -173,6 +173,13 @@ p {
   width: 20px;
 }
 
+.sub{
+height: 28px;
+width: 85px;
+margin: 10px;
+
+}
+
 /* button{
   width: 100px;
   height: 50px;
@@ -305,7 +312,7 @@ p {
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 form input {
@@ -316,8 +323,38 @@ form input {
 form label {
   align-self: center;
   margin-top: 10px;
+  color: white;
 }
 
 .subscription{
   color: white;
+}
+
+.dot-choice{
+  display: flex;
+  align-self: center;
+  /* margin-left: 400px; */
+  height: 80px;
+  width: 80px;
+}
+
+legend{
+  color: white;
+}
+
+#contactChoice1{
+  padding: 5px;
+}
+
+#contactChoice2{
+  padding: 5px;
+}
+
+#contactChoice3{
+  padding: 5px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
 }
