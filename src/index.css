@@ -27,7 +27,7 @@ code {
   z-index: -1;
 } */
 
-.c-player {
+.music {
   display: block;
   /* background-color: #313131; */
   display: block;
@@ -37,7 +37,7 @@ code {
   /* box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4); */
 }
 
-.c-player > h4 {
+.music > h4 {
   color: #FFF;
   font-size: 14px;
   text-transform: uppercase;
@@ -45,24 +45,24 @@ code {
   text-align: center;
 }
 
-.c-player > p {
+.music > p {
   color: #AAA;
   font-size: 14px;
   text-align: center;
   font-weight: 600;
 }
 
-.c-player > p span {
+.music > p span {
   font-weight: 400;
 }
 
-.c-player--details .details-img {
+.music--details .details-img {
   position: relative;
   width: fit-content;
   margin: 0 auto;
 }
 
-.c-player--details .details-img img {
+.music--details .details-img img {
   display: block;
   margin: 50px auto;
   width: 100%;
@@ -71,7 +71,7 @@ code {
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
 }
 
-.c-player--details .details-img:after {
+.music--details .details-img:after {
   content: '';
   display: block;
   position: absolute;
@@ -83,7 +83,7 @@ code {
   border: 3px dashed rgba(255, 206, 0, 1);
 }
 
-.c-player--details .details-title {
+.music--details .details-title {
   color: #EEE;
   font-size: 28px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
@@ -91,7 +91,7 @@ code {
   margin-bottom: 10px;
 }
 
-.c-player--details .details-artist {
+.music--details .details-artist {
   color: #AAA;
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
@@ -99,19 +99,18 @@ code {
   margin-bottom: 20px;
 }
 
-.c-player--controls {
+.music--controls {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.c-player--controls .play-btn {
+.music--controls .play-btn {
   display: flex;
   margin: 0 30px;
   padding: 20px;
   border-radius: 50%;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
   border: none;
   outline: none;
   background-color: #FFCE00;
@@ -120,7 +119,7 @@ code {
   cursor: pointer;
 }
 
-.c-player--controls .skip-btn {
+.music--controls .skip-btn {
   background: none;
   border: none;
   outline: none;
@@ -165,13 +164,13 @@ p {
 }
 
 .back{
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
 }
 
 .next{
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
 }
 
 /* button{

@@ -3,7 +3,7 @@ import React from 'react'
 
 function Controls(props) {
     return (
-        <div className="c-player--controls">
+        <div className="music--controls">
             <button className="skip-btn" onClick={() => props.SkipSong(false)}>
                 <img className='back' src='next-arrow1.png' alt='Back'/>
             </button>
