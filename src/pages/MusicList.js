@@ -1,9 +1,7 @@
-import Nav from '../components/Nav';
-
 function MusicList(){
     return(
     <>   
-    <Nav />
+    {/* <Nav /> */}
        
     </>  
     );
