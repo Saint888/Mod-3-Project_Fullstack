@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { hasPointerEvents } from "@testing-library/user-event/dist/utils";
+import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
-function Nav(){
+function Nav(props){
 
     const [isNavExpanded, setIsNavExpanded] = useState(false)
 
@@ -11,7 +11,7 @@ function Nav(){
             <a href="/" className="brand-name">
             <h4>CodeMusic</h4>
             </a>
-        <p className="current-song"><strong>Now Playing:</strong></p>
+        {/* <p className="current-song"><strong>Now Playing:</strong>{props.songs[props.currentSongIndex]}</p> */}
         <button className="hamburger"
         onClick={() => {
           setIsNavExpanded(!isNavExpanded);

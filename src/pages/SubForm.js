@@ -19,13 +19,6 @@ function SubForm(){
       <label htmlFor="email">Email</label>
       <input id="email" />
    
-      {/* <label>Enter your name:
-        <input
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label> */}
     </form>
 
     <button>Subscribe</button>

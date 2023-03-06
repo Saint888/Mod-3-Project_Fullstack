@@ -1,7 +1,7 @@
 function MusicList(){
     return(
     <>   
-    {/* <Nav /> */}
+    
        
     </>  
     );
