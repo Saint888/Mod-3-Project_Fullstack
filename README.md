@@ -12,6 +12,7 @@ Code used:
 - State (useState, useEffect, useRef)
 - API server
 - Fetch
+- React Router
 
 Assets:
 
