@@ -10,6 +10,4 @@ In this project an API is used to pull music data from a back end library in ord
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Mod2-Project_React-App
-# Mod2-Project_React-App
-# Mod2-Project_React-App
-# Mod2-Project_React-App
+
