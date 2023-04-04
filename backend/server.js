@@ -17,6 +17,7 @@ const connectDB = require('./config/db')
 // Connect to database
 connectDB()
 
+const songRoutes = require('./routes/songRoutes')
 const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 const { authorize } = require('./middleware/authMiddleware')
@@ -27,7 +28,7 @@ app.use(express.json())
 // app.get('/' , (req, res) => {
 //     res.send('Code Music!')
 // })
-
+app.use('/music', songRoutes)
 app.use('/users', authorize, userRoutes)
 app.use('/auth', authRoutes)
 
