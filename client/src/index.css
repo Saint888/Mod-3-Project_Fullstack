@@ -29,6 +29,38 @@ code {
   z-index: -1;
 } */
 
+.choice1{
+  margin-left:10px;
+}
+
+.choice2{
+  margin-left:10px;
+}
+
+.songChoice{
+  border: 1px solid;
+  background-color: black;
+  opacity: .8;
+  width: 500px;
+  text-align: center;
+}
+
+#musicList{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+#the-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  color: white;
+  list-style-type: none
+}
+
 .user-auth{
   text-decoration: none;
   color: white;

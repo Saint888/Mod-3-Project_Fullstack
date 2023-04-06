@@ -12,4 +12,7 @@ router.get('/seed', songControl.seed)
 // index
 router.get('/', songControl.index)
 
+// show
+router.get('/:id', songControl.show)
+
 module.exports = router

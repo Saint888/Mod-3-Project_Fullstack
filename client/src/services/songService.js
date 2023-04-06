@@ -11,3 +11,13 @@ export async function getAllSongs() {
         return []
     }
 }
+
+export async function getSong(id) {
+    const axios = customAxios()
+    try {
+        const response = await axios.get(`/music/${id}`)
+        return response.data
+    } catch(err) {
+        console.log(err.message)
+    }
+}

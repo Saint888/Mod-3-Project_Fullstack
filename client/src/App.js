@@ -5,6 +5,7 @@ import Player from './pages/music/Index';
 import { Routes, Route, Navigate } from 'react-router-dom'; // Navigate
 import Navbar from './components/Navbar';
 import Index from './pages/music/Index';
+import Show from './pages/music/Show';
 import Register from './pages/users/Register';
 import Login from './pages/users/Login';
 // import FavList from './pages/FavList';
@@ -82,12 +83,18 @@ function App() {
       <Routes>
           {/* <Route path='/music/:id' element={<ShowPost user={loggedIn} />} /> */}
       <Route path='/music' element={<Index user={loggedIn}/>} />
-
+      {loggedIn ?
+      <>
+      <Route path='/music/:id' element={<Show user={loggedIn} />} />
+      {!isLoading && <Route path='*' element={<Navigate to='/music' />} />}
+      </>
+      :
       <>
         <Route path='/register' element={<Register setUser={setUser} />} />
         <Route path='/login' element={<Login setUser={setUser} />} />
         {!isLoading && <Route path='*' element={<Navigate to='/login' />} />}
-            </> 
+      </> 
+      }
         {/* <Route path='/MusicList' element={<MusicList />} />
         <Route path='/SubForm' element={<SubForm/>} /> */}
       </Routes>
