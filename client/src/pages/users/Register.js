@@ -38,8 +38,9 @@ function Register({ setUser }) {
 
     return ( 
         <div className="user-auth">
-            <h3>Register</h3>
-            <form onSubmit={handleSubmit}>
+            <h2>Register</h2>
+            
+            <form id = 'bckgrd2' onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />
                 <input 
@@ -49,7 +50,7 @@ function Register({ setUser }) {
                     onChange={handleChange}
                     value={form.username}
                 />
-                <br /><br />
+                <br />
                 <label htmlFor="email">Email:</label>
                 <br />
                 <input 
@@ -59,7 +60,7 @@ function Register({ setUser }) {
                     onChange={handleChange}
                     value={form.email}
                 />
-                <br /><br />
+                <br />
                 <label htmlFor="password">Password:</label>
                 <br />
                 <input 
@@ -69,8 +70,8 @@ function Register({ setUser }) {
                     onChange={handleChange}
                     value={form.password}
                 />
-                <br /><br />
-                <button>Submit</button>
+                <br />
+                <button className="btn2">Submit</button>
             </form>
         </div>
      );

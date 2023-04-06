@@ -38,8 +38,9 @@ function Login({ setUser }) {
 
     return ( 
         <div className='user-auth'>
-            <h3>Login</h3>
-            <form onSubmit={handleSubmit}>
+            <h2>Login</h2>
+            <form id = 'bckgrd' onSubmit={handleSubmit}>
+                
                 <label htmlFor="username">Username:</label>
                 <br />
                 <input 
@@ -49,7 +50,7 @@ function Login({ setUser }) {
                     onChange={handleChange}
                     value={form.username}
                 />
-                <br /><br />
+                <br />
                 <label htmlFor="password">Password:</label>
                 <br />
                 <input 
@@ -60,7 +61,7 @@ function Login({ setUser }) {
                     value={form.password}
                 />
                 <br /><br />
-                <button>Submit</button>
+                <button className ='btn'>Submit</button>
             </form>
         </div>
      );

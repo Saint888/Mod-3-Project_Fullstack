@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 import Player from './pages/music/Index';
 import { Routes, Route, Navigate } from 'react-router-dom'; // Navigate
 import Navbar from './components/Navbar';
-import IndexMusic from './pages/music/Index';
+import Index from './pages/music/Index';
 import Register from './pages/users/Register';
 import Login from './pages/users/Login';
 // import FavList from './pages/FavList';
@@ -80,9 +80,8 @@ function App() {
       {/* <Nav />   */}
       <Navbar user={loggedIn} setUser={setUser} />
       <Routes>
-          {/* <Route path='/music' element={<IndexPost user={loggedIn} />} />
-          <Route path='/music/:id' element={<ShowPost user={loggedIn} />} /> */}
-      <Route path='/music' element={<IndexMusic user={loggedIn}/>} />
+          {/* <Route path='/music/:id' element={<ShowPost user={loggedIn} />} /> */}
+      <Route path='/music' element={<Index user={loggedIn}/>} />
 
       <>
         <Route path='/register' element={<Register setUser={setUser} />} />

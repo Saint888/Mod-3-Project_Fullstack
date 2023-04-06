@@ -15,7 +15,7 @@ function Navbar({ user, setUser }) {
 
     <header className="navigation"> 
             <a href="/music" className="brand-name">
-            <h4>CodeMusic</h4>
+            <h3>CodeMusic</h3>
             </a>
         {/* <p className="current-song"><strong>Now Playing:</strong>{props.songs[props.currentSongIndex]}</p> */}
         <button className="hamburger"
