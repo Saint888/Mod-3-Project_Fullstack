@@ -46,7 +46,7 @@ function Navbar({ user, setUser }) {
           </li> */}
           <li> <Link to='/music'>Music</Link></li>
           {/* <li> <Link to='/music/:id'>Now Playing</Link></li> */}
-          <li> <Link to='/music/new'>Subscribe</Link></li>
+          <li> <Link to='/music/new'>Upload</Link></li>
           <li onClick={logout}>
             <Link to="/login">Logout</Link>
           </li>

@@ -10,6 +10,9 @@ Frontend technologies used:
 1. State (useState, useEffect, useRef)
 2. Axios
 3. React router
+4. React JS
+5. HTML
+6. CSS
 
 Front-end directions: 
 1. npx create-react-app client
@@ -22,6 +25,11 @@ Backend technologies used:
 3. MongoDB
 4. Middleware
 5. Schema
+6. Cors
+7. MVC (Models,Views, Conrollers)
+8. JavaScript
+9. JSX
+10. Node JS
 
 Backend directions: 
 1. cd backend

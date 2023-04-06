@@ -19,8 +19,7 @@ code {
 
 /* .app{
   content: "";
-  /* background: url("./img/istockphoto-music.jpeg") no-repeat
-    center center/cover;
+  background-color: black;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -69,6 +68,14 @@ code {
   color: white;
   list-style-type: none
 }
+
+/* #musicBox{
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+  
+} */
 
 .user-auth{
   text-decoration: none;

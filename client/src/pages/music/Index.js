@@ -22,6 +22,7 @@ function Index() {
         <div  >
         <h1 className='musicList'>Music</h1>
         <h3 className='musicList'>Listen whenever, wherever!</h3>
+        <div className="App">
         <ul id = 'the-list'>
             {songs.map((song, index) => 
                 <li className='songChoice' key={index}>
@@ -34,7 +35,7 @@ function Index() {
                 </li>
             )}
         </ul>
-
+        </div>
         {/* <a href='/music/new'>
         <button>Subscribe</button>
         </a> */}

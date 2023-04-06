@@ -39,6 +39,7 @@ function Show() {
                 }, [currentSongIndex]); // As current song update changes, the function will envoke.
 
                 console.log(currentSongIndex)
+                console.log(songs)
 
             const audioElement = useRef();
             const [isPlaying, setIsPlaying] = useState(false);

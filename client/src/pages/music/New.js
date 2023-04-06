@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 // import { createPost } from "../../services/postService";
 
-function New({ user }) {
+function New() {
 
     // let subjectRef = useRef()
     // let bodyRef = useRef()
