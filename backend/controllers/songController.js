@@ -1,17 +1,19 @@
 const Song = require('../models/songModel')
 
-
 const appData = require('../models/music')
 
+
+
 module.exports.seed = async (req, res) => {
-    // await Posts.deleteMany({})
-    // await Posts.create(posts)
+    await Song.deleteMany({})
+    await Song.create(appData)
     res.redirect('/music')
 }
 
 module.exports.index = async (req, res) => {
     try {
-        const songs = await Song.find().sort({ createdAt: 1 })
+        const songs = await Song.find();
+        console.log(songs)
         res.status(200).json(songs)
     } catch(err) {
         res.status(400).json({ error: err.message })

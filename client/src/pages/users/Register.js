@@ -33,12 +33,12 @@ function Register({ setUser }) {
         const user = await userInfo()
         setUser(user)
 
-        navigate('/posts')
+        navigate('/music')
     }
 
     return ( 
         <div className="user-auth">
-            <h1>Register</h1>
+            <h3>Register</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />

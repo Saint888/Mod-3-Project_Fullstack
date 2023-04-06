@@ -1,7 +1,7 @@
-// const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
 const Song = require('../models/songModel')
-const Fav = require('../models/favModel')
+
 
 async function authorize(req, res, next) {
 
@@ -44,7 +44,6 @@ async function confirmUserAccess(req, res, next) {
         if (req.baseUrl.includes('appData')) { 
             document = await Song.findOne({ _id: req.params.id, user: req.user })
         } else {
-            document = await Fav.findOne({ _id: req.params.id, user: req.user })
         }
         if (!document) {
             throw new Error('User did not create this document')

@@ -1,11 +1,14 @@
 import { userInfo } from './services/userService';
-
 import './index.css';
 import {useState, useEffect} from 'react';
-import Player from './components/Player';
-import { Routes, Route } from 'react-router-dom';
-import MusicList from './pages/MusicList';
-import SubForm from './pages/SubForm';
+import Player from './pages/music/Index';
+import { Routes, Route, Navigate } from 'react-router-dom'; // Navigate
+import Navbar from './components/Navbar';
+import IndexMusic from './pages/music/Index';
+import Register from './pages/users/Register';
+import Login from './pages/users/Login';
+// import FavList from './pages/FavList';
+// import SubForm from './pages/SubForm';
 import Nav from './components/Nav';
 // import { baseUrl } from './config';
 
@@ -33,64 +36,61 @@ function App() {
 
   }, [])
 
+  
+  // async function getAllSongs() {
+  //     const axios = customAxios()
+  //     try {
+  //         const response = await axios.get('/music')
+  //         return response.data
+  //     } catch(err) {
+  //         console.log(err.message)
+  //         return []
+  //     }
+  // }
 
-  const [appData] = useState([
-    {
-      title: "Forget me too ft. Halsey",
-      artist: "Machine Gun Kelly",
-      img_src: "./images/song-1.jpg",
-      src: "./music/on-n-on.mp3"
-    },
-    {
-      title: "Private Valet",
-      artist: "Larry June",
-      img_src: "./images/song-2.jpg",
-      src: "./music/Larry-June-PrivateValet.mp3"
-    },
-    {
-      title: "4 U ft Kali Uchis",
-      artist: "Don Toliver",
-      img_src: "./images/song-3.jpg",
-      src: "./music/Don Toliver-DonToliver-4-Me[Official Audio].mp3"
-    },
-    {
-      title: "Time ft HER",
-      artist: "Kaytranada",
-      img_src: "./images/song-4.jpg",
-      src: "./music/KAYTRANADA-Intimidated.mp3"
-    },
-    {
-      title: "Savior ft Baby Keem",
-      artist: "Kendrick Lamar",
-      img_src: "./images/song-4.jpg",
-      src: "./music/Kendrick-Lamar-Savior-Ft-Baby-Keem-Sam-Dew-(HipHopKit.com).mp3"
-    }
-  ]);
+  //   const [appData, setAppData] = useState({})
 
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongIndex] = useState(0);
+  //   useEffect(() => {
+  //     async function loadData() {
+  //         const data = await getAllSongs()
+  //         setAppData(data)
+  //     }
+  //     loadData()
+  // }, [])
 
-  useEffect(() => {
-    setNextSongIndex(() => { // Anytime current song chsnges we need 'next que' to update as well.
-      if (currentSongIndex + 1 > appData.length - 1) { // If current song skips next song and amount of songs left is more than whats left in array, then we got back to 0 (beginning of array).
-        return 0;
-      } else {
-        return currentSongIndex + 1; // Otherwise -> return 'next' song.
-      }
-    });
+
+  // const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  // const [nextSongIndex, setNextSongIndex] = useState(0);
+
+  // useEffect(() => {
+  //   setNextSongIndex(() => { // Anytime current song chsnges we need 'next que' to update as well.
+  //     if (currentSongIndex + 1 > appData.length - 1) { // If current song skips next song and amount of songs left is more than whats left in array, then we got back to 0 (beginning of array).
+  //       return 0;
+  //     } else {
+  //       return currentSongIndex + 1; // Otherwise -> return 'next' song.
+  //     }
+  //   });
     
-  }, [currentSongIndex]); // As current song update changes, the function will envoke.
+  // }, [currentSongIndex]); // As current song update changes, the function will envoke.
+
+  let loggedIn = user.username
 
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav />   */}
+      <Navbar user={loggedIn} setUser={setUser} />
       <Routes>
-      <Route path='/' element={<Player currentSongIndex={currentSongIndex} 
-        setCurrentSongIndex={setCurrentSongIndex} 
-        nextSongIndex={nextSongIndex} 
-        songs={appData} />} /> 
-        <Route path='/MusicList' element={<MusicList />} />
-        <Route path='/SubForm' element={<SubForm/>} />
+          {/* <Route path='/music' element={<IndexPost user={loggedIn} />} />
+          <Route path='/music/:id' element={<ShowPost user={loggedIn} />} /> */}
+      <Route path='/music' element={<IndexMusic user={loggedIn}/>} />
+
+      <>
+        <Route path='/register' element={<Register setUser={setUser} />} />
+        <Route path='/login' element={<Login setUser={setUser} />} />
+        {!isLoading && <Route path='*' element={<Navigate to='/login' />} />}
+            </> 
+        {/* <Route path='/MusicList' element={<MusicList />} />
+        <Route path='/SubForm' element={<SubForm/>} /> */}
       </Routes>
     </div>
   );

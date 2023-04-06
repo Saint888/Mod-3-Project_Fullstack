@@ -8,7 +8,7 @@ function SubForm(){
     <>
     {/* onSubmit={handleSubmit}   */}
     <h3 className="subscription">Listen whenever, wherever!</h3>
-    <p>Subcribe Now!</p>
+    <p>Sign Up Now!</p>
     <form > 
       <label htmlFor="name">Name</label>
       <input id="name" />
@@ -23,14 +23,14 @@ function SubForm(){
 
     <legend>Please select subscription length (months):</legend>
     <div className="dot-choice">
-      <input type="radio" id="contactChoice1" name="contact" value="email" />
-      <label for="contactChoice1">Three</label>
+      <input type="radio" id="Choice1" name="choice1" value="btn" />
+      <label for="Choice1">Three</label>
 
-      <input type="radio" id="contactChoice2" name="contact" value="phone" />
-      <label for="contactChoice2">Six</label>
+      <input type="radio" id="Choice2" name="choice2" value="btn" />
+      <label for="Choice2">Six</label>
 
-      <input type="radio" id="contactChoice3" name="contact" value="mail" />
-      <label for="contactChoice3">Twelve</label>
+      <input type="radio" id="Choice3" name="choice3" value="btn" />
+      <label for="Choice3">Twelve</label>
     </div>
 
 
@@ -38,7 +38,7 @@ function SubForm(){
    
     </form>
 
-    <button className="sub">Subscribe</button>
+    <button className="sub">Create Account</button>
        
     </>  
     );

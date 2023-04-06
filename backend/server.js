@@ -4,7 +4,7 @@ require('dotenv').config()
 // Load express
 const express = require('express')
 
-// const cors = require('cors')
+const cors = require('cors')
 
 // Setup our Express app
 const app = express()
@@ -23,7 +23,7 @@ const userRoutes = require('./routes/userRoutes')
 const { authorize } = require('./middleware/authMiddleware')
 
 app.use(express.json())
-// app.use(cors())
+app.use(cors())
 
 // app.get('/' , (req, res) => {
 //     res.send('Code Music!')

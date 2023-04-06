@@ -11,9 +11,14 @@ const songSchema = new Schema({
         type: String, 
         required: true
     },
-    image: {
+    img_src: {
 
-    }
+    },
+    src: {
+
+    },
+   
+    favorite: [{type: Boolean, default: false }]
 })
 
 const Song = mongoose.model('songs', songSchema)

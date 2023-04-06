@@ -27,6 +27,13 @@ code {
   z-index: -1;
 } */
 
+.user-auth{
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
 .music {
   display: block;
   /* background-color: #313131; */
