@@ -15,4 +15,10 @@ router.get('/', songControl.index)
 // show
 router.get('/:id', songControl.show)
 
+// new
+router.get('/new', songControl.new)
+
+// create
+router.post('/', songControl.create)
+
 module.exports = router

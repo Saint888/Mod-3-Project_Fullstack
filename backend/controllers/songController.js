@@ -20,6 +20,25 @@ module.exports.index = async (req, res) => {
     }
 }
 
+module.exports.new = async (req, res) => {
+    try {
+        const songs = await Song();
+        console.log(songs)
+        res.status(200).json(songs)
+    } catch(err) {
+        res.status(400).json({ error: err.message })
+    }
+}
+
+module.exports.create = async (req, res) => {
+    try {
+        const songs = await Song.create(req.body)
+        res.status(200).json(songs)
+    } catch(err) {
+        res.status(400).json({ error: err.message })
+    }
+}
+
 // module.exports.delete = async (req, res) => {
 //     try {
 //         // first find the post, store it in a variable, then delete it from database
@@ -45,14 +64,7 @@ module.exports.index = async (req, res) => {
 //     }
 // }
 
-// module.exports.create = async (req, res) => {
-//     try {
-//         const post = await Posts.create(req.body)
-//         res.status(200).json(post)
-//     } catch(err) {
-//         res.status(400).json({ error: err.message })
-//     }
-// }
+
 
 module.exports.show = async (req, res) => {
     try {

@@ -20,6 +20,7 @@ function Show() {
         }
         loadData()
     }, [params.id])
+    
         console.log(songs)
 
       
@@ -37,7 +38,7 @@ function Show() {
                     
                 }, [currentSongIndex]); // As current song update changes, the function will envoke.
 
-
+                console.log(currentSongIndex)
 
             const audioElement = useRef();
             const [isPlaying, setIsPlaying] = useState(false);
@@ -45,7 +46,7 @@ function Show() {
                     if (isPlaying) {
                     audioElement.current.play();
                     } else {
-                        audioElement.current.pause();
+                        // audioElement.current.pause();
                     }
                 });
 
@@ -78,17 +79,17 @@ function Show() {
 
     return (
         <div className="music">
-           {songs?.map((songs, index) =>  
+           {songs.map((songs, index) =>  
             <div >
-           <Link to={`/music/${songs._id}`} key={index}>
-            <audio src={songs._id[currentSongIndex]} ref={audioElement}></audio>
+           <Link to={`/music/${songs._id}`} key = {index}>
+            <audio src={songs[currentSongIndex]} ref={audioElement}></audio>
             <h4>Now Playing: </h4>
-            <CurrentMusic song={songs._id[currentSongIndex]} />
+            <CurrentMusic song={songs[currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             <p>Next up: <span>{songs[nextSongIndex].title} by {songs[nextSongIndex].artist}</span></p>
              </Link>
             </div>
-            )}
+             )}
         </div>
         
     )

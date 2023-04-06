@@ -8,8 +8,7 @@ import Index from './pages/music/Index';
 import Show from './pages/music/Show';
 import Register from './pages/users/Register';
 import Login from './pages/users/Login';
-// import FavList from './pages/FavList';
-// import SubForm from './pages/SubForm';
+import New from './pages/music/New'
 import Nav from './components/Nav';
 // import { baseUrl } from './config';
 
@@ -86,6 +85,7 @@ function App() {
       {loggedIn ?
       <>
       <Route path='/music/:id' element={<Show user={loggedIn} />} />
+      <Route path='/music/new' element={<New user={loggedIn} />} />
       {!isLoading && <Route path='*' element={<Navigate to='/music' />} />}
       </>
       :
